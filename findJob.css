@@ -4,6 +4,7 @@ body {
     height: 100vh;
     width: 100%;
     text-align: center;
+    background-color: lightblue;
 }
 
 .container {
@@ -17,4 +18,8 @@ body {
 
 .search-container {
     padding: 10px;
+}
+
+.work{
+    padding: 5px;
 }

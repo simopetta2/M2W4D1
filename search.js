@@ -128,8 +128,10 @@ function jobResearch() {
   let search = document.querySelector('#result');
 
 
-  search.innerHTML = ''
 
+
+  search.innerHTML = ''
+  let risultato = [];
 
   for (let i = 0; i < jobs.length; i++) {
     let offers = jobs[i]
@@ -137,18 +139,38 @@ function jobResearch() {
     let locationMinuscolo = offers.location.toLowerCase()
 
     if (titleMinuscolo.includes(work) && locationMinuscolo.includes(location)) {
-     const result = `<div>
+    
+risultato.push(offers)
+
+    }
+  }
+
+  let counter = document.querySelector('#counter');
+  counter.innerText = risultato.length +' ' + 'Risultati trovati';
+  for (let i = 0; i < risultato.length; i++) {
+
+    offers = risultato [i];
+  const result = `<div>
         <h3>${offers.title}</h3>
         <p>${offers.location}</p>
         
-      
+    
         `;
       search.innerHTML += result
 
-
-    }
-
-
-
+   
   }
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
