@@ -139,26 +139,31 @@ function jobResearch() {
     let locationMinuscolo = offers.location.toLowerCase()
 
     if (titleMinuscolo.includes(work) && locationMinuscolo.includes(location)) {
-    
-risultato.push(offers)
+
+      risultato.push(offers)
 
     }
   }
 
   let counter = document.querySelector('#counter');
-  counter.innerText = risultato.length +' ' + 'Risultati trovati';
+
+  if (risultato.length === 1) {
+    counter.innerText = risultato.length + ' ' + 'Risultato trovato';
+  } else{
+    counter.innerText = risultato.length + ' ' + 'Risultati trovati';
+  }
   for (let i = 0; i < risultato.length; i++) {
 
-    offers = risultato [i];
-  const result = `<div>
+    offers = risultato[i];
+    const result = `<div>
         <h3>${offers.title}</h3>
         <p>${offers.location}</p>
         
     
         `;
-      search.innerHTML += result
+    search.innerHTML += result
+ 
 
-   
   }
 
 
