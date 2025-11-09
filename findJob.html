@@ -10,18 +10,25 @@
 
 <body>
     <header>
-        <h1>Find Job</h1>
-        <div class="input-container">
-            <input type="text" id="work" placeholder="cerca lavoro">
+        <div class="title">
+            <h1>Find Job</h1>
+
         </div>
         <div class="input-container">
-            <input type="text" id="position" placeholder="cerca la zona">
+            <label for="work"> <ion-icon name="briefcase"></ion-icon></label>
+            <input type="text" id="work" class="input" placeholder="Cerca il lavoro">
+        </div>
+        <div class="input-container">
+            <label for="position"><ion-icon name="globe"></ion-icon></label>
+            <input type="text" id="position" class="input" placeholder="Cerca la zona">
         </div>
         <div class="search-container">
-            <button onclick="jobResearch()" id="search">cerca</button>
+            <ion-icon name="search"></ion-icon>
+            <button onclick="jobResearch()" id="search" class="search-button">Cerca</button>
+            
         </div>
         <div id="counter">
-           
+
         </div>
     </header>
     <main>
@@ -38,6 +45,8 @@
 
 
     <script src="search.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

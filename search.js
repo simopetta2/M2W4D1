@@ -149,7 +149,7 @@ function jobResearch() {
 
   if (risultato.length === 1) {
     counter.innerText = risultato.length + ' ' + 'Risultato trovato';
-  } else{
+  } else {
     counter.innerText = risultato.length + ' ' + 'Risultati trovati';
   }
   for (let i = 0; i < risultato.length; i++) {
@@ -157,12 +157,14 @@ function jobResearch() {
     offers = risultato[i];
     const result = `<div>
         <h3>${offers.title}</h3>
-        <p>${offers.location}</p>
-        
+        <p style = 'color : white';>${offers.location}</p>
+        <hr>
     
         `;
+
+
     search.innerHTML += result
- 
+
 
   }
 
